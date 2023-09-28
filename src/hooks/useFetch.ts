@@ -1,6 +1,6 @@
 import mockData from "../mocks/data"
 
-const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=b4d3e7c6d82948cbb08d19fef848018d'
+const API = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=af9d873988bc46b5a7cd70a59c79972e'
 
 export default async function useFetch(hardcodeado: Boolean, id: number) {
     var result = null
@@ -13,7 +13,7 @@ export default async function useFetch(hardcodeado: Boolean, id: number) {
         console.error(error)
     }
     if (id) {
-        const APIInfo = `https://api.spoonacular.com/recipes/${id}/information?apiKey=b4d3e7c6d82948cbb08d19fef848018d`
+        let APIInfo = `https://api.spoonacular.com/recipes/${id}/information?apiKey=af9d873988bc46b5a7cd70a59c79972e`
         try {
             const response = await fetch(APIInfo);
             if (!response.ok) throw new Error('Error en la llamada a la API');
